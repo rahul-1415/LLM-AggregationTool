@@ -1,0 +1,316 @@
+{
+  "id": "6287a8f9-2a45-483c-b67c-66a5f2e037f4",
+  "version": "2.0",
+  "name": "LLMAggTool",
+  "url": "https://gemini.google.com/app",
+  "tests": [{
+    "id": "70f8e481-c3e7-467c-a084-13687fa38aac",
+    "name": "Untitled",
+    "commands": []
+  }, {
+    "id": "2d1ef9b5-3edc-4afa-a52d-345718702425",
+    "name": "ChatGPT",
+    "commands": [{
+      "id": "bb367b4b-75f8-455b-8317-1e02c8e123bc",
+      "comment": "",
+      "command": "open",
+      "target": "https://chatgpt.com/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "663a091b-0d66-4880-aaec-dfa2b6332906",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1176x875",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "ba8469a0-3d5f-477e-b3d4-13571a2595aa",
+      "comment": "",
+      "command": "click",
+      "target": "id=prompt-textarea",
+      "targets": [
+        ["id=prompt-textarea", "id"],
+        ["css=#prompt-textarea", "css:finder"],
+        ["xpath=//textarea[@id='prompt-textarea']", "xpath:attributes"],
+        ["xpath=//div[@id='__next']/div/div[2]/main/div/div[2]/div/div/form/div/div[2]/div/div/div[2]/textarea", "xpath:idRelative"],
+        ["xpath=//textarea", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "3486ee54-1508-4b86-bea6-f614b4711eec",
+      "comment": "",
+      "command": "type",
+      "target": "id=prompt-textarea",
+      "targets": [
+        ["id=prompt-textarea", "id"],
+        ["css=#prompt-textarea", "css:finder"],
+        ["xpath=//textarea[@id='prompt-textarea']", "xpath:attributes"],
+        ["xpath=//div[@id='__next']/div/div[2]/main/div/div[2]/div/div/form/div/div[2]/div/div/div[2]/textarea", "xpath:idRelative"],
+        ["xpath=//textarea", "xpath:position"]
+      ],
+      "value": "${prompt1}"
+    }, {
+      "id": "d48c4acd-3b57-41ca-a3d6-1f2eaf0d4a4d",
+      "comment": "",
+      "command": "click",
+      "target": "css=.icon-2xl",
+      "targets": [
+        ["css=.icon-2xl", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "e3b96a7e-dce4-4709-a0aa-1de683e99313",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "css=rect",
+      "targets": [
+        ["css=rect", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "7601623e-042a-45ae-9d89-350b3a2552dc",
+      "comment": "",
+      "command": "mouseOut",
+      "target": "css=rect",
+      "targets": [
+        ["css=rect", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "622e47ef-3b45-4319-a276-0a7499f0549a",
+      "comment": "",
+      "command": "click",
+      "target": "css=.markdown > p",
+      "targets": [
+        ["css=.markdown > p", "css:finder"],
+        ["xpath=//div[@id='__next']/div/div[2]/main/div/div/div/div/div/div/div[3]/div/div/div[2]/div/div/div/div/div/p", "xpath:idRelative"],
+        ["xpath=//p", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "3e582cee-62a2-4dd5-a01a-2922b91c2297",
+      "comment": "",
+      "command": "waitForElementVisible",
+      "target": "css=span:nth-child(2) .icon-md-heavy",
+      "targets": [
+        ["css=span:nth-child(2) .icon-md-heavy", "css:finder"]
+      ],
+      "value": "30000"
+    }, {
+      "id": "4628bf72-d74a-406d-be18-86a0b9d2c1e0",
+      "comment": "",
+      "command": "storeText",
+      "target": "css=.markdown",
+      "targets": [
+        ["css=.markdown", "css:finder"],
+        ["xpath=//div[@id='__next']/div/div[2]/main/div/div/div/div/div/div/div[3]/div/div/div[2]/div/div/div/div/div", "xpath:idRelative"],
+        ["xpath=//div[3]/div/div/div[2]/div/div/div/div/div", "xpath:position"]
+      ],
+      "value": "chatgptResponse"
+    }, {
+      "id": "ba15cbfb-d8ee-424a-8ac9-c78e1f063f59",
+      "comment": "",
+      "command": "echo",
+      "target": "${chatgptResponse}",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "6d19dc72-e1dc-47e7-aff7-360446d91642",
+    "name": "prompt",
+    "commands": []
+  }, {
+    "id": "0e4aabf8-10c7-4fca-a655-fd9705a20c30",
+    "name": "Copilot",
+    "commands": [{
+      "id": "329569c9-a806-47dd-b7b2-e39573656f09",
+      "comment": "",
+      "command": "store",
+      "target": "How to keep the house cool in extreme summer heat?",
+      "targets": [],
+      "value": "prompt1"
+    }, {
+      "id": "ebec16e5-2245-4e38-9c4a-849dc4a908ae",
+      "comment": "",
+      "command": "open",
+      "target": "https://www.bing.com/search?form=CONVRD&q=Bing+AI&showconv=1",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "55d77b20-0a5c-48b3-9ee2-9ed0749078b0",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1176x875",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "0e046e53-42f6-4186-824a-3122027c3e83",
+      "comment": "",
+      "command": "waitForElementVisible",
+      "target": "css=.cib-serp-main",
+      "targets": [
+        ["css=.cib-serp-main", "css:finder"],
+        ["xpath=//div[@id='b_sydConvCont']/cib-serp", "xpath:idRelative"],
+        ["xpath=//cib-serp", "xpath:position"]
+      ],
+      "value": "30000"
+    }, {
+      "id": "3f1c2efe-0577-4448-b6e6-faeb6c49238d",
+      "comment": "",
+      "command": "waitForElementVisible",
+      "target": "css=.cib-serp-main",
+      "targets": [
+        ["css=.cib-serp-main", "css:finder"],
+        ["xpath=//div[@id='b_sydConvCont']/cib-serp", "xpath:idRelative"],
+        ["xpath=//cib-serp", "xpath:position"]
+      ],
+      "value": "30000"
+    }, {
+      "id": "da28100e-28f8-442a-a9c3-bd36512dddff",
+      "comment": "",
+      "command": "waitForElementVisible",
+      "target": "css=.cib-serp-main",
+      "targets": [
+        ["css=.cib-serp-main", "css:finder"],
+        ["xpath=//div[@id='b_sydConvCont']/cib-serp", "xpath:idRelative"],
+        ["xpath=//cib-serp", "xpath:position"]
+      ],
+      "value": "30000"
+    }, {
+      "id": "75cdfb82-d43f-4eca-95da-678e2ea4cb6e",
+      "comment": "",
+      "command": "selectFrame",
+      "target": "css=.cib-serp-main",
+      "targets": [
+        ["css=.cib-serp-main", "css:finder"],
+        ["xpath=//div[@id='b_sydConvCont']/cib-serp", "xpath:idRelative"],
+        ["xpath=//cib-serp", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "940b68c5-5b3b-4829-bc7e-ee3e21679519",
+      "comment": "",
+      "command": "type",
+      "target": "css=.cib-serp-main",
+      "targets": [
+        ["css=.cib-serp-main", "css:finder"],
+        ["xpath=//div[@id='b_sydConvCont']/cib-serp", "xpath:idRelative"],
+        ["xpath=//cib-serp", "xpath:position"]
+      ],
+      "value": "${prompt1}"
+    }]
+  }, {
+    "id": "91b7dab8-ea5b-4603-9bbb-da252c5071b1",
+    "name": "Gemini",
+    "commands": [{
+      "id": "d4d03041-a774-4a0d-a2c0-d4fe6c454083",
+      "comment": "",
+      "command": "store",
+      "target": "How to keep the house cool in extreme summer heat?",
+      "targets": [],
+      "value": "prompt1"
+    }, {
+      "id": "9bc0fa0c-9ade-47f8-9078-72f8ecf341c6",
+      "comment": "",
+      "command": "open",
+      "target": "https://gemini.google.com/app",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "0dc9ff0e-5119-4a38-962c-ffb69c74b75d",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1176x875",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "101df573-8628-4a55-879c-6365326898f1",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,0)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "b9cc164e-39cb-483c-98e4-a4c2d5cb6457",
+      "comment": "",
+      "command": "click",
+      "target": "css=.ql-editor > p",
+      "targets": [
+        ["css=.ql-editor > p", "css:finder"],
+        ["xpath=//chat-app[@id='app-root']/main/side-navigation-v2/bard-sidenav-container/bard-sidenav-content/div/div/div[2]/chat-window/div/div[2]/div/input-area-v2/div/div/div/div/div/rich-textarea/div/p", "xpath:idRelative"],
+        ["xpath=//rich-textarea/div/p", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "70b5c870-fb91-40ab-b9a1-8af7244e1da4",
+      "comment": "",
+      "command": "editContent",
+      "target": "css=.ql-editor",
+      "targets": [
+        ["css=.ql-editor", "css:finder"],
+        ["xpath=//chat-app[@id='app-root']/main/side-navigation-v2/bard-sidenav-container/bard-sidenav-content/div/div/div[2]/chat-window/div/div[2]/div/input-area-v2/div/div/div/div/div/rich-textarea/div", "xpath:idRelative"],
+        ["xpath=//rich-textarea/div", "xpath:position"]
+      ],
+      "value": "${prompt1}"
+    }, {
+      "id": "cec53a20-f0de-483f-9ec8-945d19772fe5",
+      "comment": "",
+      "command": "click",
+      "target": "css=.send-button > .mat-icon",
+      "targets": [
+        ["css=.send-button > .mat-icon", "css:finder"],
+        ["xpath=//chat-app[@id='app-root']/main/side-navigation-v2/bard-sidenav-container/bard-sidenav-content/div/div/div[2]/chat-window/div/div[2]/div/input-area-v2/div/div/div[3]/div/div/button/mat-icon", "xpath:idRelative"],
+        ["xpath=//div[3]/div/div/button/mat-icon", "xpath:position"],
+        ["xpath=//mat-icon[contains(.,'send')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "1a3b9255-347d-4bc1-95a0-d9341f5c78c9",
+      "comment": "",
+      "command": "waitForElementVisible",
+      "target": "css=.tts-button > .mat-mdc-button-touch-target",
+      "targets": [
+        ["css=.tts-button > .mat-mdc-button-touch-target", "css:finder"],
+        ["xpath=//div[@id='chat-history']/infinite-scroller/div/model-response/div/response-container/div/div/div/tts-control/div/div/button/span[3]", "xpath:idRelative"],
+        ["xpath=//tts-control/div/div/button/span[3]", "xpath:position"]
+      ],
+      "value": "50000"
+    }, {
+      "id": "33b54969-d4d6-463c-a97b-42d70a4ae422",
+      "comment": "",
+      "command": "storeText",
+      "target": "css=.markdown",
+      "targets": [
+        ["css=.markdown", "css:finder"],
+        ["xpath=//message-content[@id='message-content-id-r_8953c5df2d6d3754']/div", "xpath:idRelative"],
+        ["xpath=//message-content/div", "xpath:position"]
+      ],
+      "value": "geminiResponse"
+    }, {
+      "id": "dc0ee317-92bb-4281-8fb2-95e8b17d0ab6",
+      "comment": "",
+      "command": "echo",
+      "target": "${geminiResponse}",
+      "targets": [],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "12701cfc-ed1c-4745-a82f-c3b05ad2d019",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["70f8e481-c3e7-467c-a084-13687fa38aac"]
+  }, {
+    "id": "b5e2a675-8cf3-45aa-98d8-a9c01bdda161",
+    "name": "promptTesting",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["2d1ef9b5-3edc-4afa-a52d-345718702425", "91b7dab8-ea5b-4603-9bbb-da252c5071b1"]
+  }],
+  "urls": ["https://chatgpt.com/", "https://www.bing.com/search?form=CONVRD&q=Bing+AI&showconv=1", "https://gemini.google.com/app"],
+  "plugins": []
+}
