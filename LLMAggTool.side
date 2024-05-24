@@ -11,6 +11,13 @@
     "id": "2d1ef9b5-3edc-4afa-a52d-345718702425",
     "name": "ChatGPT",
     "commands": [{
+      "id": "b990e962-5817-4a9c-89f9-646464d5f193",
+      "comment": "",
+      "command": "store",
+      "target": "How to keep the house cool in extreme summer heat?",
+      "targets": [],
+      "value": "prompt1"
+    }, {
       "id": "bb367b4b-75f8-455b-8317-1e02c8e123bc",
       "comment": "",
       "command": "open",
