@@ -2,7 +2,7 @@
   "id": "6287a8f9-2a45-483c-b67c-66a5f2e037f4",
   "version": "2.0",
   "name": "LLMAggTool",
-  "url": "https://huggingface.co/chat/",
+  "url": "https://www.c40knowledgehub.org/s/global-search/%40uri#t=Articles&sort=relevancy&numberOfResults=100",
   "tests": [{
     "id": "70f8e481-c3e7-467c-a084-13687fa38aac",
     "name": "PDFReader",
@@ -2821,6 +2821,256 @@
       "targets": [],
       "value": ""
     }]
+  }, {
+    "id": "a2b2951b-9aa0-41d1-acfc-8c1a598bca40",
+    "name": "DataScraping",
+    "commands": [{
+      "id": "1aa3f5b1-5edf-478e-93c4-9cf733b01634",
+      "comment": "",
+      "command": "store",
+      "target": "https://docs.google.com/forms/d/e/1FAIpQLSdnHGci09Fkgn1zkNLDyPNblbbMPZ1Pbh0mvlVeZw-51t8tvw/viewform?usp=sf_link",
+      "targets": [],
+      "value": "formLink"
+    }, {
+      "id": "9eaaee14-e899-460a-8670-5c393e7b0af5",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return 1;",
+      "targets": [],
+      "value": "counter"
+    }, {
+      "id": "2e066d81-1762-4a37-902d-ef2d51601991",
+      "comment": "",
+      "command": "while",
+      "target": "${counter} <= 90  ",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "ed5032d1-cdc2-4266-b898-3af6e853e362",
+      "comment": "",
+      "command": "echo",
+      "target": "${counter}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "958b859f-384b-4676-8116-f3a19a3caaa0",
+      "comment": "",
+      "command": "open",
+      "target": "https://www.c40knowledgehub.org/s/global-search/%40uri?language=en_US#first=700&t=Articles&sort=relevancy&numberOfResults=100",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "1d3761ee-6170-4853-bf8f-02b5932b83ae",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1420x851",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "f7a1e84f-d74d-442b-9d62-1de6a4294b71",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "css=.coveo-list-layout:nth-child(${counter}) .coveo-result-row:nth-child(2) > .coveo-result-cell",
+      "targets": [
+        ["css=.coveo-list-layout:nth-child(1) .coveo-result-row:nth-child(2) > .coveo-result-cell", "css:finder"],
+        ["xpath=//div[@id='coveo-result-list1']/div/div/div/div[2]/div/div/div[2]/div", "xpath:idRelative"],
+        ["xpath=//div[8]/div/div/div/div[2]/div/div/div[2]/div", "xpath:position"]
+      ],
+      "value": "120000"
+    }, {
+      "id": "3afa2171-bcd4-4c91-9216-d63bb7a7c53f",
+      "comment": "",
+      "command": "click",
+      "target": "css=.coveo-list-layout:nth-child(${counter}) .coveo-result-row:nth-child(2) > .coveo-result-cell",
+      "targets": [
+        ["css=.coveo-list-layout:nth-child(2) .coveo-result-row:nth-child(2) > .coveo-result-cell", "css:finder"],
+        ["xpath=//div[@id='coveo-result-list1']/div/div[2]/div/div[2]/div/div/div[2]/div", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div[2]/div/div/div[2]/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "36bdd304-67c1-42b3-894d-8abc282856a6",
+      "comment": "",
+      "command": "storeText",
+      "target": "css=.coveo-list-layout:nth-child(${counter}) .coveo-result-row:nth-child(2) > .coveo-result-cell",
+      "targets": [
+        ["css=.knowledgeBody", "css:finder"],
+        ["xpath=//div[3]/div[2]/div/div/div[2]/div/div", "xpath:position"]
+      ],
+      "value": "articleTitle"
+    }, {
+      "id": "44e285ba-e91b-4520-8b52-548804065895",
+      "comment": "",
+      "command": "click",
+      "target": "css=.coveo-list-layout:nth-child(${counter}) .CoveoResultLink",
+      "targets": [
+        ["linkText=Mainstreaming wellbeing and sustainability in policymaking", "linkText"],
+        ["css=.coveo-list-layout:nth-child(57) .CoveoResultLink", "css:finder"],
+        ["xpath=//a[contains(text(),'Mainstreaming wellbeing and sustainability in policymaking')]", "xpath:link"],
+        ["xpath=//div[@id='coveo-result-list1']/div/div[57]/div/div/div[2]/div/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, 'https://www.c40knowledgehub.org/s/article/Mainstreaming-wellbeing-and-sustainability-in-policymaking')]", "xpath:href"],
+        ["xpath=//div[57]/div/div/div[2]/div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Mainstreaming wellbeing and sustainability in policymaking')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "a7f72449-2ddc-420d-8cdc-4ac0d982ae9c",
+      "comment": "",
+      "command": "//click",
+      "target": "css=.coveo-list-layout:nth-child(${counter}) img",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "8859b61a-de8a-485e-b0ae-5592e7a9cd1b",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "css=.knowledgeBody",
+      "targets": [
+        ["css=.u3bW4e .Pc9Gce", "css:finder"],
+        ["xpath=//form[@id='mG61Hd']/div[2]/div/div[2]/div[2]/div/div/div[2]/div/div/div[2]", "xpath:idRelative"],
+        ["xpath=//div[2]/div[2]/div/div/div[2]/div/div/div[2]", "xpath:position"]
+      ],
+      "value": "120000"
+    }, {
+      "id": "c37478fd-2619-458f-a2b0-850a92eed627",
+      "comment": "",
+      "command": "click",
+      "target": "css=.knowledgeBody",
+      "targets": [
+        ["css=.knowledgeBody", "css:finder"],
+        ["xpath=//div[3]/div[2]/div/div/div[2]/div/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "46c82fc9-e2a7-43f5-b8a9-8aa88c412d92",
+      "comment": "",
+      "command": "storeText",
+      "target": "css=.knowledgeBody",
+      "targets": [
+        ["css=.knowledgeBody", "css:finder"],
+        ["xpath=//div[3]/div[2]/div/div/div[2]/div/div", "xpath:position"]
+      ],
+      "value": "articleData"
+    }, {
+      "id": "6065fbce-1ff9-441a-a149-3a258e2e9366",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return ${counter} + 1;",
+      "targets": [],
+      "value": "counter"
+    }, {
+      "id": "42a14985-bb1b-409f-ad18-07c30d6489ac",
+      "comment": "",
+      "command": "echo",
+      "target": "${articleTitle}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "4b495db9-0001-4a92-baf7-ea07f8b5908f",
+      "comment": "",
+      "command": "echo",
+      "target": "${articleData}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "234ef903-3b02-407b-bda5-b6c07bc50847",
+      "comment": "",
+      "command": "open",
+      "target": "${formLink}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "a320fbe7-e47e-48de-a913-1d299909df75",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1176x875",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "bbb12b22-9c0a-41fb-af52-d9e47133703d",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "css=.Qr7Oae:nth-child(1) .Pc9Gce",
+      "targets": [
+        ["css=.Qr7Oae:nth-child(1) .Pc9Gce", "css:finder"],
+        ["xpath=//form[@id='mG61Hd']/div[2]/div/div[2]/div/div/div/div[2]/div/div/div[2]", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/div[2]", "xpath:position"]
+      ],
+      "value": "30000"
+    }, {
+      "id": "8ef40dd4-6ed6-4dca-a64e-9945a2d01221",
+      "comment": "",
+      "command": "click",
+      "target": "css=.Qr7Oae:nth-child(1) .Pc9Gce",
+      "targets": [
+        ["css=.Qr7Oae:nth-child(1) .Pc9Gce", "css:finder"],
+        ["xpath=//form[@id='mG61Hd']/div[2]/div/div[2]/div/div/div/div[2]/div/div/div[2]", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/div[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "484efef4-4a35-40d7-906c-b6f65b33d347",
+      "comment": "",
+      "command": "type",
+      "target": "css=.Qr7Oae:nth-child(1) .KHxj8b",
+      "targets": [
+        ["css=.Qr7Oae:nth-child(1) .KHxj8b", "css:finder"],
+        ["xpath=//form[@id='mG61Hd']/div[2]/div/div[2]/div/div/div/div[2]/div/div/div[2]/textarea", "xpath:idRelative"],
+        ["xpath=//textarea", "xpath:position"]
+      ],
+      "value": "${articleTitle}"
+    }, {
+      "id": "c7255cdd-d86c-4c4c-9a3d-c49ba95592e7",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "css=.u3bW4e .Pc9Gce",
+      "targets": [
+        ["css=.u3bW4e .Pc9Gce", "css:finder"],
+        ["xpath=//form[@id='mG61Hd']/div[2]/div/div[2]/div[2]/div/div/div[2]/div/div/div[2]", "xpath:idRelative"],
+        ["xpath=//div[2]/div[2]/div/div/div[2]/div/div/div[2]", "xpath:position"]
+      ],
+      "value": "30000"
+    }, {
+      "id": "1c653374-c7c2-443f-a060-fe5bb3ee8114",
+      "comment": "",
+      "command": "click",
+      "target": "css=.Qr7Oae:nth-child(2) .Pc9Gce",
+      "targets": [
+        ["css=.Qr7Oae:nth-child(2) .Pc9Gce", "css:finder"],
+        ["xpath=//form[@id='mG61Hd']/div[2]/div/div[2]/div[2]/div/div/div[2]/div/div/div[2]", "xpath:idRelative"],
+        ["xpath=//div[2]/div[2]/div/div/div[2]/div/div/div[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "305f7df8-63bb-4595-94ed-7c5af1c14d96",
+      "comment": "",
+      "command": "type",
+      "target": "css=.Qr7Oae:nth-child(2) .KHxj8b",
+      "targets": [
+        ["css=.u3bW4e .KHxj8b", "css:finder"],
+        ["xpath=//form[@id='mG61Hd']/div[2]/div/div[2]/div[2]/div/div/div[2]/div/div/div[2]/textarea", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/div[2]/div/div/div[2]/textarea", "xpath:position"]
+      ],
+      "value": "${articleData}"
+    }, {
+      "id": "8a69fb3e-95e4-42ef-9dbc-c5814a394747",
+      "comment": "",
+      "command": "click",
+      "target": "css=.Y5sE8d .NPEfkd",
+      "targets": [
+        ["css=.Y5sE8d .NPEfkd", "css:finder"],
+        ["xpath=//form[@id='mG61Hd']/div[2]/div/div[3]/div/div/div/span/span", "xpath:idRelative"],
+        ["xpath=//div[3]/div/div/div/span/span", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "0d571b69-4ec1-40a0-a956-14cd251dc9c6",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
   }],
   "suites": [{
     "id": "12701cfc-ed1c-4745-a82f-c3b05ad2d019",
@@ -2844,6 +3094,6 @@
     "timeout": 300,
     "tests": []
   }],
-  "urls": ["https://chatgpt.com/", "https://www.bing.com/search?form=CONVRD&q=Bing+AI&showconv=1", "https://gemini.google.com/app", "https://docs.google.com/spreadsheets/d/1tVZPuYmreluo8q1h29slP7153H6lMsWc_Q6gp4kAvGU/edit#gid=0", "https://forms.gle/K4XTsViHxiUUvDNh6", "https://docs.google.com/document/d/12YeG45AVzLm4lu5sNq3MDv1Cri-96A3V1a8RsHYRJsA/edit", "http://127.0.0.1:5000/", "https://claude.ai/chat/", "https://www.perplexity.ai/", "https://www.bing.com/chat", "https://www.meta.ai/", "https://huggingface.co/chat/"],
+  "urls": ["https://chatgpt.com/", "https://www.bing.com/search?form=CONVRD&q=Bing+AI&showconv=1", "https://gemini.google.com/app", "https://docs.google.com/spreadsheets/d/1tVZPuYmreluo8q1h29slP7153H6lMsWc_Q6gp4kAvGU/edit#gid=0", "https://forms.gle/K4XTsViHxiUUvDNh6", "https://docs.google.com/document/d/12YeG45AVzLm4lu5sNq3MDv1Cri-96A3V1a8RsHYRJsA/edit", "http://127.0.0.1:5000/", "https://claude.ai/chat/", "https://www.perplexity.ai/", "https://www.bing.com/chat", "https://www.meta.ai/", "https://huggingface.co/chat/", "https://www.c40knowledgehub.org/s/global-search/%40uri#t=Articles&sort=relevancy&numberOfResults=100"],
   "plugins": []
 }
